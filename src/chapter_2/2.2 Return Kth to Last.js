@@ -5,17 +5,17 @@ var linkedList = function(value) {
 };
 
 function findKthToLast(k, head){
-	var store=[];
-	var node=head;
-	var counter=0;
+  var store=[];
+  var node=head;
+  var counter=0;
 
-	while(node){
-		store.push(node);
-		node=node.next;
-	}
+  while(node){
+    store.push(node);
+    node=node.next;
+  }
 
-	console.log(store[store.length-k-1]);
-	return store[store.length-k];
+  console.log(store[store.length-k-1]);
+  return store[store.length-k];
 }
 
 /* TESTS */

@@ -4,31 +4,31 @@ var LinkedList = function(value) {
 };
 
 function partition(head, partition){
-	var left=[];
-	var right=[];
-	var node=head;
+  var left=[];
+  var right=[];
+  var node=head;
 
-	//partition values
-	while(node){
-		if(node.value<partition){
-			left.push(node);
-		}else{
-			right.push(node);
-		}
-		node=node.next;
-	}
+  //partition values
+  while(node){
+    if(node.value<partition){
+      left.push(node);
+    }else{
+      right.push(node);
+    }
+    node=node.next;
+  }
 
-	var vals=left.concat(right);
+  var vals=left.concat(right);
 
-	//construct new linked list
-	for(let i=0; i<vals.length-1; i++){
-		let node=vals[i];
-		node.next=vals[i+1];
-	}
+  //construct new linked list
+  for(let i=0; i<vals.length-1; i++){
+    let node=vals[i];
+    node.next=vals[i+1];
+  }
 
-	vals[vals.length-1].next=null;
+  vals[vals.length-1].next=null;
 
-	return vals[0];
+  return vals[0];
 
 }
 

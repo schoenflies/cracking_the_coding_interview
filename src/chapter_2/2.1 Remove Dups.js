@@ -17,7 +17,7 @@ var printLinkedList = function(head) {
 
 function removeDups(head){
   //initialize
-	var currnode = head.next;
+  var currnode = head.next;
   var prevnode = head;
   var store = new Set();
   store.add(head.value);

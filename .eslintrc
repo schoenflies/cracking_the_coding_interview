@@ -16,7 +16,8 @@
       2,
       "always"
     ],
-    "eqeqeq": 2
+    "eqeqeq": 2,
+    "no-mixed-spaces-and-tabs": 0,
   },
   "env": {
     "es6": true,
@@ -24,8 +25,8 @@
     "browser": true,
     "mocha": true
   },
-  "ecmaFeatures": {
-    "modules": true
+  "parserOptions": {
+    "sourceType": "module"
   },
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
 }
