@@ -1,6 +1,6 @@
 //Time complexity is O(n)
 
-function isUnique(arr){
+export function isUnique(arr){
 	//check if arr length is more than max value
 	if(arr.length>arr.max){
 		return false;
@@ -16,7 +16,3 @@ function isUnique(arr){
 	}
 }
 
-//TESTS
-console.log(isUnique([1,2,3,4]))
-console.log(isUnique([1,2,3,4,1]))
-console.log(isUnique([1,2,3,4,3,2,34]))
