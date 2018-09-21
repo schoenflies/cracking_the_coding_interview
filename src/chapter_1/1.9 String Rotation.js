@@ -1,8 +1,9 @@
-function stringRotation(s1,s2){
-  return (s2+s2).includes(s1);
+export function stringRotation(str1, str2) {
+  if (!str1 || !str2) {
+    throw new Error('invalid input');
+  }
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  return (str2 + str2).includes(str1);
 }
-
-// Test
-console.log(stringRotation('waterbottle', 'erbottlewat'), true);
-console.log(stringRotation('waterbottle', 'erbotlewatt'), false);
-console.log(stringRotation('aaata', 'aataa'), true);

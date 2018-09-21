@@ -13,8 +13,6 @@
     "babel-core": "^6.26.3",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "chai": "^4.1.2",
-    "eslint": "^5.6.0",
-    "mocha": "^5.2.0",
-    "mocha-eslint": "^4.1.0"
+    "mocha": "^5.2.0"
   }
 }

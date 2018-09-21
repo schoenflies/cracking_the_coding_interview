@@ -29,7 +29,7 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns true for unique string: '${arg}'`, function() {
-        let expected = arg.replace(/ /g, '%20').split('');
+        let expected = arg.replace(/ /g, '%').split('');
         expect(func(arg.split(''))).to.eql(expected);
       });
 

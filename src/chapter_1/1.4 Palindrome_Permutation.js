@@ -1,21 +1,19 @@
 //Time complexity O(n)
-function palinPerm(str){
-  var store = new Set;
-	
-  for(let i=0; i<str.length; i++){
-    if(str.charAt(i) !== ' '){
-      var char=str.charAt(i).toLowerCase();
+export function palinPerm(str) {
+  if (!str) {
+    return false;
+  }
+  let store = new Set;
+
+  for (let char of str) {
+    if (char !== ' ') {
       //check if exists in set
-      if(store.has(char)){
+      if (store.has(char)) {
         store.delete(char);
-      }else{
-			  store.add(char);
+      } else {
+        store.add(char);
       }
     }
   }
-  return store.size === 1 || store.size === 0;
+  return store.size <= 1;
 }
-
-//TESTS
-console.log(palinPerm('Tact Coa'), 'true');
-console.log(palinPerm('Tact boa'), 'false');

@@ -7,8 +7,7 @@ function oneAway(str1,str2){
   }else{
     //check replace character
     var store = str1.split('');
-    for(let i=0; i<str2.length; i++){
-      var char=str2.charAt(i);
+    for(let char of str2){
       if(store.includes(char)){
         store.splice(store.indexOf(char),1);
       }else{
@@ -20,8 +19,4 @@ function oneAway(str1,str2){
   }
 }
 
-// Test
-console.log(oneAway('pale', 'ple'), true);
-console.log(oneAway('pales', 'pale'), true);
-console.log(oneAway('pale', 'bale'), true);
-console.log(oneAway('pale', 'bake'), false);
+// console.log(oneAway('pale', 'pl'));
