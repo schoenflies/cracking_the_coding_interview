@@ -1,12 +1,12 @@
 //Time complexity O(n)
 
-function oneAway(str1,str2){
+export function oneAway(str1,str2){
   //return true if strings are identical
   if(str1===str2){
     return true;
   }else{
     //check replace character
-    var store = str1.split('');
+    var store = str1.toString().split('');
     for(let char of str2){
       if(store.includes(char)){
         store.splice(store.indexOf(char),1);
@@ -19,4 +19,3 @@ function oneAway(str1,str2){
   }
 }
 
-// console.log(oneAway('pale', 'pl'));
