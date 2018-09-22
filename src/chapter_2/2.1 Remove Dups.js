@@ -5,10 +5,10 @@ export function removeDups(head) {
   }
 
   //initialize
-  var store = new Set();
+  let store = new Set();
   store.add(head.val);
-  var currnode = head.next;
-  var prevnode = head;
+  let currnode = head.next;
+  let prevnode = head;
 
   //check for duplicates
   while (currnode) {

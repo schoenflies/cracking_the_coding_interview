@@ -1,6 +1,6 @@
 export function isPalindromeStack(list) {
-  var store = [];
-  var node = list;
+  let store = [];
+  let node = list;
   store.push(node.val);
 
   while (node.next) {
@@ -8,10 +8,8 @@ export function isPalindromeStack(list) {
     node = node.next;
   }
 
-  var left = 0;
-  var right = store.length - 1;
-
-  // console.log('store: '+store)
+  let left = 0;
+  let right = store.length - 1;
 
   while (left < right) {
     if (store[left] !== store[right]) {

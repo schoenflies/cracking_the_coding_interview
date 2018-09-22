@@ -5,7 +5,7 @@ export function urlify(url) {
   if (!url || url.length === 0) {
     return url;
   }
-  var store = url.toString().split(',');
+  let store = url.toString().split(',');
   for (let i = 0; i < store.length; i++) {
     if (store[i] === ' ') {
       store.splice(i, 1, '%');

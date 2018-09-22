@@ -6,7 +6,7 @@ export function oneAway(str1,str2){
     return true;
   }else{
     //check replace character
-    var store = str1.toString().split('');
+    let store = str1.toString().split('');
     for(let char of str2){
       if(store.includes(char)){
         store.splice(store.indexOf(char),1);
